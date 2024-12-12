@@ -1,27 +1,18 @@
-#container {
-  text-align: center;
+#hero-section {
+  padding-top: 112px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  .hero-title {
+    text-shadow: 2px 2px 0px #896af9;
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  .hero-image {
+    margin-top: 72px;
+    padding-bottom: 82px;
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  @media (min-width: 1200px) {
+    .hero-title {
+      font-size: 56px;
+    }
+  }
 }
