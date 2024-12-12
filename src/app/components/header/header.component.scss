@@ -1,0 +1,15 @@
+.app-header {
+  height: 96px;
+
+  .app-toolbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    height: 72px;
+  }
+}
