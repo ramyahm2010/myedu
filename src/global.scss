@@ -35,3 +35,31 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Font declaration */
+@import "./assets/fonts/fonts.css";
+
+:root {
+  --font-primary: "Nunito", sans-serif;
+}
+
+html,
+body,
+ion-app,
+ion-content,
+p {
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+em {
+  font-family: var(--font-primary);
+  font-style: italic;
+}
