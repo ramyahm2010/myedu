@@ -4,7 +4,7 @@
       <ion-grid>
         <ion-row class="ion-justify-content-center">
           <ion-col size="12" size-md="5" class="ion-text-center text-white">
-            <h1 class="hero-title">Discover the magic of our surprise box</h1>
+            <h1 class="title">Discover the magic of our surprise box</h1>
             <p class="text-bold">Unleash your child's curiosity with our educational subscription box
               filled with fun
               and learning.</p>
@@ -14,14 +14,55 @@
       </ion-grid>
 
       <div class="hero-image">
-        <ion-grid>
-          <ion-row class="ion-justify-content-center">
-            <ion-col size="12" class="ion-text-center">
-              <img src="assets/images/hero.png" alt="hero image">
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+        <picture>
+          <source srcset="assets/images/hero-large.png" media="(min-width: 768px)">
+          <img src="assets/images/hero-small.png" alt="hero section" class="responsive-image">
+        </picture>
       </div>
+    </div>
+
+    <div id="how-to-section" class="bg-light-cream">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-md="5" class="ion-text-center">
+            <small>Discover</small>
+            <h1 class="title">How It Works: Subscribe and Receive Your Surprise Box</h1>
+            <p class="text">Subscribe to our surprise subscription box and give your child the gift of learning. Each
+              month, we
+              curate a box filled with educational materials tailored to your child's age and interests.</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-md="11" class="ion-text-center">
+            <div class="subscribe-steps">
+              <ion-grid>
+                <ion-row class="ion-justify-content-center">
+                  @for (step of steps; track $index; let idx = $index) {
+                  <ion-col size="12" size-md="4" class="ion-text-center">
+                    <div class="step">
+                      <div class="step-icon">
+                        <img [src]="'assets/images/step-icon-0' + (idx+1) + '.svg'" alt="step icon">
+                      </div>
+                      <h3>Step {{idx+1}}:</h3>
+                      <h2>{{step.title}}</h2>
+                      <p>{{step.description}}</p>
+                    </div>
+                  </ion-col>
+                  }
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="ion-text-center subscribe-button">
+        <app-button label="Subscribe Now" />
+      </div>
+
     </div>
   </div>
 </ion-content>

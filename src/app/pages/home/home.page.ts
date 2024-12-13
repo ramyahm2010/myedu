@@ -10,5 +10,28 @@ import { ButtonComponent } from '@components/button/button.component';
   imports: [IonContent, IonGrid, IonRow, IonCol, ButtonComponent],
 })
 export class HomePage {
-  constructor() {}
+  steps: {
+    title: string;
+    description: string;
+  }[] = [];
+
+  constructor() {
+    this.steps = [
+      {
+        title: 'Subscribe',
+        description:
+          "Select a subscription plan that suits your child's learning needs and preferences.",
+      },
+      {
+        title: 'Personalize Your Box',
+        description:
+          "Tell us about your child's age, interests, and learning goals, and we'll customize their surprise box accordingly.",
+      },
+      {
+        title: 'Receive Your Surprise Box',
+        description:
+          'Sit back and relax as your child eagerly awaits the arrival of their monthly surprise box filled with engaging learning materials.',
+      },
+    ];
+  }
 }

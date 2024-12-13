@@ -1,18 +1,78 @@
 #hero-section {
   padding-top: 112px;
 
-  .hero-title {
+  .title {
     text-shadow: 2px 2px 0px #896af9;
+    font-size: 56px;
   }
 
   .hero-image {
     margin-top: 72px;
     padding-bottom: 82px;
+
+    .responsive-image {
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  @media (min-width: 1200px) {
-    .hero-title {
-      font-size: 56px;
+  @media (max-width: 768px) {
+    .hero-image {
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+    }
+  }
+}
+
+#how-to-section {
+  background-image: url("../../../assets/images/how-to-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 112px;
+  padding-bottom: 112px;
+
+  @media (max-width: 1200px) {
+    background-image: none;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .subscribe-steps {
+    margin-top: 80px;
+
+    .step-icon {
+      width: 96px;
+      height: 96px;
+      background-color: var(--color-white);
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  .subscribe-button {
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 24px;
+    }
+
+    .subscribe-steps {
+      margin-top: 0;
+
+      .step {
+        margin-top: 40px;
+      }
     }
   }
 }
