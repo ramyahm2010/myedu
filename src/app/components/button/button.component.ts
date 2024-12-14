@@ -1,4 +1,4 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IonButton } from '@ionic/angular/standalone';
 
 @Component({
@@ -8,11 +8,7 @@ import { IonButton } from '@ionic/angular/standalone';
   imports: [IonButton],
   standalone: true,
 })
-export class ButtonComponent implements OnInit {
-  label = input<string>();
-  isBlock = input<boolean>();
-
-  constructor() {}
-
-  ngOnInit() {}
+export class ButtonComponent {
+  @Input() label: string = '';
+  @Input() isBlock: boolean = false;
 }
