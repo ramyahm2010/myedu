@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent } from './button.component';
 import { By } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
 
 describe('ButtonComponent', () => {
   let component: ButtonComponent;
@@ -9,6 +10,7 @@ describe('ButtonComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ButtonComponent],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ButtonComponent);
@@ -45,5 +47,14 @@ describe('ButtonComponent', () => {
       By.css('ion-button')
     ).nativeElement;
     expect(buttonElement.hasAttribute('expand')).toBeFalse();
+  });
+
+  it('should render the route input correctly', () => {
+    component.route = '/test';
+    fixture.detectChanges();
+    const buttonElement = fixture.debugElement.query(
+      By.css('ion-button')
+    ).nativeElement;
+    expect(buttonElement.getAttribute('ng-reflect-router-link')).toBe('/test');
   });
 });
