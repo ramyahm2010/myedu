@@ -1,4 +1,46 @@
 <div id="footer" class="ion-padding-horizontal">
+
+  <div class="ion-hide-sm-up ion-padding-horizontal">
+    <div class="ion-padding-bottom">
+      <img src="assets/images/footer-logo.svg" alt="">
+    </div>
+
+    <ul class="footer-links ion-margin-vertical">
+      <li class="ion-margin-end ion-margin-top">Link One</li>
+      <li class="ion-margin-end ion-margin-top">Link Two</li>
+      <li class="ion-margin-end ion-margin-top">Link Three</li>
+      <li class="ion-margin-end ion-margin-top">Link Four</li>
+      <li class="ion-margin-end ion-margin-top">Link Five</li>
+    </ul>
+
+    <div class="ion-padding-vertical"></div>
+
+    <h3 class="ion-margin-top">Subscribe</h3>
+
+    <div class="ion-padding-vertical">
+      <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+        <ion-input formControlName="email" label="Enter your email" label-placement="floating" fill="outline"
+          class="subscribe-input"></ion-input>
+        @if (subscribeForm.get('email')?.invalid && subscribeForm.get('email')?.touched) {
+        <div class="error-message">
+          <ion-text color="danger">
+            @if (subscribeForm.get('email')?.errors?.['required']) {
+            <small>Email is required.</small>
+            }
+            @if (subscribeForm.get('email')?.errors?.['email']) {
+            <small>Please enter a valid email address.</small>
+            }
+          </ion-text>
+        </div>
+        }
+        <ion-button type="submit" expand="block" class="ion-margin-top subscribe-button text-bold"
+          [disabled]="subscribeForm.invalid">
+          Subscribe
+        </ion-button>
+      </form>
+    </div>
+  </div>
+
   <ion-grid>
     <ion-row>
       <ion-col size="12" size-md="10" offset-md="1">

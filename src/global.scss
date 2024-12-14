@@ -81,6 +81,11 @@ a {
   font-weight: 700;
 }
 
+// fix for ion-label floating label
+.label-text-wrapper {
+  top: -5px;
+}
+
 #container {
   margin-top: 96px;
   min-height: calc(100vh - 96px);

@@ -3,6 +3,24 @@
   padding-bottom: 64px;
   font-size: 1.2rem;
 
+  .subscribe-input {
+    --border-color: var(--color-black);
+    --border-radius: 0;
+  }
+
+  
+
+  .subscribe-button {
+    --background: var(--color-white);
+    --color: var(--color-black);
+    --box-shadow: none;
+    --border-radius: 0;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    text-transform: none;
+    border: 1px solid var(--color-black);
+  }
+
   .divider {
     border-top: 1px solid var(--color-black);
   }

@@ -50,8 +50,8 @@ This project is a responsive web application created from a provided Figma desig
 
 ### **Prerequisites**
 
-- **Node.js:** v18.x or higher
-- **npm:** v9.x or higher
+- **Node.js:** v20.x or higher
+- **npm:** v10.x or higher
 - **Angular CLI:** v18.x or higher
 - **Chromium:** Installed on Linux (Manjaro)
 
