@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonToolbar, IonTitle, IonHeader } from '@ionic/angular/standalone';
 
 @Component({
@@ -8,8 +8,4 @@ import { IonToolbar, IonTitle, IonHeader } from '@ionic/angular/standalone';
   standalone: true,
   imports: [IonHeader, IonToolbar, IonTitle],
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class HeaderComponent {}

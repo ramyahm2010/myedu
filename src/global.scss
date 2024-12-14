@@ -67,6 +67,16 @@ em {
   font-style: italic;
 }
 
+a {
+  color: var(--color-black);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+}
+
 .text-bold {
   font-weight: 700;
 }

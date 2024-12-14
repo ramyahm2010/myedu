@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 
 @Component({
@@ -8,8 +8,4 @@ import { IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
   standalone: true,
   imports: [IonGrid, IonRow, IonCol],
 })
-export class FooterComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class FooterComponent {}
