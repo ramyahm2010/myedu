@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { IonContent, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { ButtonComponent } from '@components/button/button.component';
+import { FooterComponent } from '@components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonGrid, IonRow, IonCol, ButtonComponent],
+  imports: [
+    IonContent,
+    IonGrid,
+    IonRow,
+    IonCol,
+    ButtonComponent,
+    FooterComponent,
+  ],
 })
 export class HomePage {
   steps: {

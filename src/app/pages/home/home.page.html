@@ -41,7 +41,7 @@
               <ion-grid>
                 <ion-row class="ion-justify-content-center">
                   @for (step of steps; track $index; let idx = $index) {
-                  <ion-col size="12" size-md="4" class="ion-text-center">
+                  <ion-col size="12" size-md="6" size-lg="4" class="ion-text-center">
                     <div class="step">
                       <div class="step-icon">
                         <img [src]="'assets/images/step-icon-0' + (idx+1) + '.svg'" alt="step icon">
@@ -65,4 +65,6 @@
 
     </div>
   </div>
+
+  <app-footer />
 </ion-content>
