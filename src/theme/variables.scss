@@ -9,13 +9,15 @@
   --color-primary: #896af9;
   --color-primary-rgb: 137, 106, 249;
   --color-white: #ffffff;
-  --color-white-rgb: 255, 255, 255;
   --color-black: #000000;
-  --color-black-rgb: 0, 0, 0;
   --color-light-cream: #fff9e6;
-  --color-light-cream-rgb: 255, 249, 230;
   --ion-color-purple: #ab95f9;
-  --ion-color-purple-rgb: 171, 149, 249;
+  --color-light-lavender: #f1edfe;
+  --color-light-gray: #f2f2f2;
+  --color-light-purple: #bfb8d7;
+  --color-medium-gray: #838383;
+  --color-dark-gray: #666666;
+
 
   /* Ionic Theme Colors */
   --ion-color-primary: var(--color-primary);
@@ -33,6 +35,18 @@
   color: var(--color-white);
 }
 
+.text-medium-gray {
+  color: var(--color-medium-gray);
+}
+
+.text-dark-gray {
+  color: var(--color-dark-gray);
+}
+
 .bg-light-cream {
   background-color: var(--color-light-cream);
+}
+
+.bg-light-lavender {
+  background-color: var(--color-light-lavender);
 }

@@ -1,3 +1,3 @@
-<div class="main-button">
-    <ion-button [expand]="isBlock ? 'block' : ''" [routerLink]="route">{{ label }}</ion-button>
+<div class="main-button border-main" [class]="{'border-main': border}">
+    <ion-button [expand]="block ? 'block' : ''" [routerLink]="route">{{ label }}</ion-button>
 </div>

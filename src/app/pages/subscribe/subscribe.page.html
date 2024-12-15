@@ -1,13 +1,161 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>subscribe</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div id="container" class="subscribe-page">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="9">
+          <ion-row class="box">
+            <ion-col size="12" size-md="8" class="subscribe-form">
+              <form [formGroup]="subscribeForm" (ngSubmit)="submit()">
+                <h2>Subscribe</h2>
+                <p>to our Monthly Surprise Box</p>
+                <hr class="divider" />
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">subscribe</ion-title>
-    </ion-toolbar>
-  </ion-header>
+                <h5 class="text-bold ion-padding-top">Contact Information</h5>
+
+                <div class="ion-padding-top">
+                  <h5>Your Name</h5>
+                  <ion-input fill="outline" placeholder="e.g Osama Alshathri" formControlName="yourName"></ion-input>
+                </div>
+
+                <div class="ion-padding-vertical">
+                  <h5>Email</h5>
+                  <ion-input fill="outline" placeholder="Osama@gmail.com" formControlName="email"></ion-input>
+                </div>
+
+                <h5 class="text-bold ion-padding-top">Child’s Information</h5>
+
+                <div class="ion-padding-top">
+                  <h5>Child’s Full Name</h5>
+                  <ion-input fill="outline" placeholder="e.g Sarah Mohammad" formControlName="childName"></ion-input>
+                </div>
+
+                <div class="ion-padding-top">
+                  <h5>Child’s Date of Birth</h5>
+                  <ion-row class="ion-align-items-center" formGroupName="childDOB">
+                    <ion-col size="4">
+                      <ion-select fill="outline" interface="popover" placeholder="Day" formControlName="day">
+                        <ion-select-option value="01">01</ion-select-option>
+                        <ion-select-option value="02">02</ion-select-option>
+                        <ion-select-option value="03">03</ion-select-option>
+                      </ion-select>
+                    </ion-col>
+
+                    <ion-col size="4">
+                      <ion-select fill="outline" interface="popover" placeholder="Month" formControlName="month">
+                        <ion-select-option value="Jan">Jan</ion-select-option>
+                        <ion-select-option value="Feb">Feb</ion-select-option>
+                        <ion-select-option value="Mar">Mar</ion-select-option>
+                      </ion-select>
+                    </ion-col>
+
+                    <ion-col size="4">
+                      <ion-select fill="outline" interface="popover" placeholder="Year" formControlName="year">
+                        <ion-select-option value="2000">2000</ion-select-option>
+                        <ion-select-option value="2001">2001</ion-select-option>
+                        <ion-select-option value="2002">2002</ion-select-option>
+                      </ion-select>
+                    </ion-col>
+                  </ion-row>
+                </div>
+
+                <div class="ion-padding-top">
+                  <h5>Grade</h5>
+                  <ion-select fill="outline" interface="popover" placeholder="e.g Grade 2" formControlName="grade">
+                    <ion-select-option value="2000">Grade 1</ion-select-option>
+                    <ion-select-option value="2001">Grade 2</ion-select-option>
+                    <ion-select-option value="2002">Grade 3</ion-select-option>
+                  </ion-select>
+                </div>
+
+                <div class="ion-padding-top">
+                  <h5>Gender</h5>
+                  <ion-radio-group formControlName="selectedGender" class="radio-group">
+                    <ion-item lines="none" class="radio-item ion-margin-end">
+                      <ion-label>Boy</ion-label>
+                      <ion-radio slot="end" value="boy"></ion-radio>
+                    </ion-item>
+
+                    <ion-item lines="none" class="radio-item">
+                      <ion-label>Girl</ion-label>
+                      <ion-radio slot="end" value="girl"></ion-radio>
+                    </ion-item>
+                  </ion-radio-group>
+                </div>
+
+                <div class="ion-padding-top">
+                  <h4 class="text-bold ion-padding-vertical">As a parent select any 3 topics</h4>
+                  <div class="topics-container ion-padding-bottom">
+                    <ion-chip [color]="topicSelected('Arabic') ? 'primary' : 'medium'" (click)="toggleTopic('Arabic')">
+                      <ion-label>Arabic</ion-label>
+                    </ion-chip>
+                    <ion-chip [color]="topicSelected('Islamic') ? 'primary' : 'medium'"
+                      (click)="toggleTopic('Islamic')">
+                      <ion-label>Islamic</ion-label>
+                    </ion-chip>
+                    <ion-chip [color]="topicSelected('English') ? 'primary' : 'medium'"
+                      (click)="toggleTopic('English')">
+                      <ion-label>English</ion-label>
+                    </ion-chip>
+                    <ion-chip [color]="topicSelected('History') ? 'primary' : 'medium'"
+                      (click)="toggleTopic('History')">
+                      <ion-label>History</ion-label>
+                    </ion-chip>
+                    <ion-chip [color]="topicSelected('Sports') ? 'primary' : 'medium'" (click)="toggleTopic('Sports')">
+                      <ion-label>Sports</ion-label>
+                    </ion-chip>
+                  </div>
+                </div>
+
+                <div class="ion-padding-vertical">
+                  <app-button label="Continue to payment" [block]="true" [border]="true" />
+                </div>
+              </form>
+            </ion-col>
+            <ion-col size="12" size-md="4" class="subscribe-summary bg-light-lavender">
+              <div class="summary-container">
+                <div class="summary-header">
+                  <h2>Summary</h2>
+                  <small class="text-dark-gray">of your Monthly Surprise Box</small>
+                </div>
+
+                <div class="item-box ion-padding">
+                  <div class="item-info">
+                    <strong>Mystery Box</strong>
+                    <span class="text-medium-gray"><small>X</small> 1</span>
+                  </div>
+                  <div class="item-price">
+                    <span>SAR<strong> 456</strong></span>
+                    <span class="text-medium-gray">Monthly</span>
+                  </div>
+                </div>
+
+                <div class="cost-row ion-padding-top">
+                  <span>Subtotal</span>
+                  <span>SAR 456</span>
+                </div>
+                <div class="cost-row ion-padding-vertical">
+                  <span>Shipping</span>
+                  <span class="text-dark-gray">Free</span>
+                </div>
+                <div class="cost-row">
+                  <span>Taxes</span>
+                  <span>SAR 4.0</span>
+                </div>
+
+                <hr class="divider" />
+
+                <div class="total-row">
+                  <strong>Total</strong>
+                  <div class="total-price">
+                    <span class="price">SAR <strong> 456</strong></span>
+                    <span class="text-dark-gray">Monthly</span>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

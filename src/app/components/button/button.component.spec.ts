@@ -31,8 +31,8 @@ describe('ButtonComponent', () => {
     expect(buttonElement.textContent).toContain('Test Button');
   });
 
-  it('should have the correct expand property when isBlock is true', () => {
-    component.isBlock = true;
+  it('should have the correct expand property when block is true', () => {
+    component.block = true;
     fixture.detectChanges();
     const buttonElement = fixture.debugElement.query(
       By.css('ion-button')
@@ -40,8 +40,8 @@ describe('ButtonComponent', () => {
     expect(buttonElement.expand).toBe('block');
   });
 
-  it('should not have the expand attribute when isBlock is false', () => {
-    component.isBlock = false;
+  it('should not have the expand attribute when block is false', () => {
+    component.block = false;
     fixture.detectChanges();
     const buttonElement = fixture.debugElement.query(
       By.css('ion-button')

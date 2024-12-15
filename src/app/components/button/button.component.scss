@@ -1,18 +1,27 @@
-.main-button ion-button {
-  --background: var(--color-white);
-  --background-hover: rgba(var(--color-primary-rgb), 0.4);
-  --background-activated: rgba(var(--color-primary-rgb), 0.4);
-  --background-focused: rgba(var(--color-primary-rgb), 0.6);
-  --color: var(--color-primary);
-  --border-radius: 24px;
-  --border-width: 0px;
-  --box-shadow: 4px 4px 0px -1px var(--color-primary);
-  --ripple-color: rgba(137, 106, 249, 0.3);
-  --padding-top: 24px;
-  --padding-bottom: 24px;
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: none;
+.main-button {
+  ion-button {
+    --background: var(--color-white);
+    --background-hover: rgba(var(--color-primary-rgb), 0.4);
+    --background-activated: rgba(var(--color-primary-rgb), 0.4);
+    --background-focused: rgba(var(--color-primary-rgb), 0.6);
+    --color: var(--color-primary);
+    --border-radius: 24px;
+    --border-width: 0px;
+    --box-shadow: 4px 4px 0px -1px var(--color-primary);
+    --ripple-color: rgba(var(--color-primary-rgb), 0.3);
+    --padding-top: 24px;
+    --padding-bottom: 24px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  &.border-main {
+    ion-button {
+      border: 1px solid var(--color-primary);
+      border-radius: 24px;
+    }
+  }
 }
 
 @media (max-width: 768px) {

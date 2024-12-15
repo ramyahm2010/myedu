@@ -11,6 +11,7 @@ import { IonButton } from '@ionic/angular/standalone';
 })
 export class ButtonComponent {
   @Input() label: string = '';
-  @Input() isBlock: boolean = false;
+  @Input() block: boolean = false;
+  @Input() border: boolean = false;
   @Input() route: string = '';
 }
