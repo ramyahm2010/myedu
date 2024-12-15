@@ -5,7 +5,7 @@
         <ion-col size="12" size-md="9">
           <ion-row class="box">
             <ion-col size="12" size-md="8" class="subscribe-form">
-              <form [formGroup]="subscribeForm" (ngSubmit)="submit()">
+              <form [formGroup]="subscribeForm">
                 <h2>Subscribe</h2>
                 <p>to our Monthly Surprise Box</p>
                 <hr class="divider" />
@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="ion-padding-vertical">
-                  <app-button label="Continue to payment" [block]="true" [border]="true" />
+                  <app-button label="Continue to payment" [block]="true" [border]="true" (buttonClick)="submit()" />
                 </div>
               </form>
             </ion-col>

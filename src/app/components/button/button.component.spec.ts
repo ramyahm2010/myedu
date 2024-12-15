@@ -57,4 +57,13 @@ describe('ButtonComponent', () => {
     ).nativeElement;
     expect(buttonElement.getAttribute('ng-reflect-router-link')).toBe('/test');
   });
+
+  it('should emit buttonClick event when clicked', () => {
+    spyOn(component.buttonClick, 'emit');
+    const buttonElement = fixture.debugElement.query(
+      By.css('ion-button')
+    ).nativeElement;
+    buttonElement.click();
+    expect(component.buttonClick.emit).toHaveBeenCalled();
+  });
 });

@@ -1,3 +1,12 @@
+<!-- ButtonComponent Template -->
 <div class="main-button border-main" [class]="{'border-main': border}">
-    <ion-button [expand]="block ? 'block' : ''" [routerLink]="route">{{ label }}</ion-button>
+  <!--
+    ion-button:
+    - expand: Determines if the button should expand to the full width of its container.
+    - routerLink: The route to navigate to when the button is clicked.
+    - label: The text to be displayed on the button.
+  -->
+  <ion-button [expand]="block ? 'block' : ''" [routerLink]="route && route.length ? route : null"
+    (click)="clickedButton()">{{ label
+    }}</ion-button>
 </div>

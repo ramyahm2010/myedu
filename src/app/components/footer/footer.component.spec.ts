@@ -58,4 +58,22 @@ describe('FooterComponent', () => {
       expect(errorMessage.textContent).toContain('Email is required.');
     }
   });
+
+  it('should log email on form submission when form is valid', () => {
+    spyOn(console, 'log');
+    component.subscribeForm.patchValue({
+      email: 'test@example.com',
+    });
+    component.onSubmit();
+    expect(console.log).toHaveBeenCalledWith('Email:', 'test@example.com');
+  });
+
+  it('should not log email on form submission when form is invalid', () => {
+    spyOn(console, 'log');
+    component.subscribeForm.patchValue({
+      email: 'invalid-email',
+    });
+    component.onSubmit();
+    expect(console.log).not.toHaveBeenCalled();
+  });
 });

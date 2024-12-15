@@ -20,24 +20,26 @@ import {
   styleUrls: ['./footer.component.scss'],
   standalone: true,
   imports: [
+    IonText,
     IonGrid,
     IonRow,
     IonCol,
     IonButton,
     IonInput,
     ReactiveFormsModule,
-    IonText,
   ],
 })
 export class FooterComponent {
   subscribeForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
+    // Initialize the form with an email control and validation
     this.subscribeForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
   }
 
+  // Handle form submission
   onSubmit() {
     if (this.subscribeForm.valid) {
       console.log('Email:', this.subscribeForm.value.email);
